@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>POSTFIXTOPREFIX</title>
+</head>
+<body>
+    <div class="header">Postfix To Prefix</div>
+    <audio src="Mahabharat-Title(PaglaSongs).mp3" title="music" style="margin-left: 800px;background-color: rgb(247, 248, 250);" autoplay loop controls autostart></audio>
+    <div class="container">
+        <div class="main-container">
+            <div class="input-alert-submit">
+        <div class="input-submit-block">
+            <input id="input-text" title="enter string" class="input-infix" type="text" required placeholder="enter infix expression here...">
+            <button id="go-btn" class="submit-btn">submit</button>
+        </div>
+        <div id="alert-js" class="alert">message</div>
+    </div>
+        <div class="solution-block">
+            <div class="expression-reset">
+        <div id="infix-exp" title="Given Expression" class="title-solution"></div>
+        <!-- <div id="reset" class="resetbtn"> <button></button></div> -->
+        <button id="reset" onClick="window.location.reload();"  class="resetbtn">reset</button>
+    
+    </div>
+        
+        <div class="answer-engine">
+        <div class="pre-answer">
+            <div class="ans-title">Ele.</div>
+            <div id="answer-field" class="answer">Elements of expression </div>
+            <!-- <div id="next-button" class="next-button-css">next</div> -->
+            <button id="next-button"  class="next-button-css">next</button>
+        </div>
+        <div id="answer-stack"  class="stack-block">
+            <div id="ans-flat" title="output string" class="ans-flat-css"></div>
+            <div class="msg_stack">
+            <div id="oprator-stack" title="oprand stack" class="oprator-bucket"></div>
+            <div id="alert-js1" class="alert1">message</div>
+        </div>
+        </div>
+        </div>
+        <div id="final-ans-block" title="final answer" class="answer-block"></div>
+    </div>
+    </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
+
+
+
