@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>infixtopostfix</title>
+</head>
+<body>
+    <div class="header">infix to postfix</div>
+    <div class="container">
+        <div class="main-container">
+            <div class="input-alert-submit">
+        <div class="input-submit-block">
+            <input id="input-text" class="input-infix" type="text" required placeholder="enter infix expression here...">
+            <button id="go-btn" class="submit-btn">submit</button>
+        </div>
+        <div id="alert-js1" class="alert">message</div>
+    </div>
+        <div class="solution-block">
+            <div class="expression-reset">
+        <div id="infix-exp" class="title-solution"></div>
+        <div id="reset" class="resetbtn">reset</div></div>
+        <div class="answer-engine">
+        <div class="pre-answer">
+            <div class="ans-title">Ele.</div>
+            <div id="answer-field" class="answer">Elements of expression </div>
+            <div id="next-button" class="next-button-css">next</div>
+        </div>
+        <div id="answer-stack"  class="stack-block">
+            <div id="ans-flat" title="charecters of prefix" class="ans-flat-css"></div>
+            <div class="msg_bucket">
+            <div id="oprator-stack" class="oprator-bucket"></div>
+            <div id="alert-js" class="newmsg">message</div>
+        </div>
+        </div>
+        </div>
+        <div id="final-ans-block" title="final answer" class="answer-block"></div>
+    </div>
+    </div>
+    </div>
+</body>
+<script src="backup.js"></script>
+</html>
