@@ -1,0 +1,13 @@
+
+.mb-3 input{
+    width: 70vh;
+}
+form button{
+    margin-left: 300px;
+}
+body{
+    /* background-color:rgb(85, 90, 100); */
+    /* background-image: url(https://i.pinimg.com/originals/9b/c0/31/9bc031ded28a4eccb4a3f1df621ff84d.png); */
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
