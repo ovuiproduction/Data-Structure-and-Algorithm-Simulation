@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>infixtoprefix</title>
+</head>
+<body>
+    <div class="header">Infix To Prefix</div>
+    <div class="container">
+        <div class="main-container">
+            <div class="input-alert-submit">
+        <div class="input-submit-block">
+            <input id="input-text" title="enter string" class="input-infix" type="text" required placeholder="enter infix expression here...">
+            <button id="go-btn" class="submit-btn">submit</button>
+        </div>
+        <div id="alert-js" class="alert">message</div>
+    </div>
+        <div class="solution-block">
+            <div class="expression-reset">
+        <div id="infix-exp" title="given infix string" class="title-solution"></div>
+        <button id="reset" class="resetbtn">reset</button></div>
+        <div class="answer-engine">
+        <div class="pre-answer">
+            <div class="ans-title">Ele.</div>
+            <div id="answer-field" class="answer">Elements of expression </div>
+            <button id="next-button" class="next-button-css">next</button>
+        </div>
+        <div id="answer-stack"  class="stack-block">
+            <div id="ans-flat" title="Output String" class="ans-flat-css"></div>
+            <div class="msg_bucket">
+            <div id="oprator-stack" title="oprator stack" class="oprator-bucket"></div>
+            <div id="alert-js1" class="alert1">message</div>
+            </div>
+        </div>
+        </div>
+        <div id="final-ans-block" title="final answer" class="answer-block"></div>
+    </div>
+    </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
+
+
+
