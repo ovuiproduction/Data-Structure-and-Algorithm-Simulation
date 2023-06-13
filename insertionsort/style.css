@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(6, 7, 6);
+}
+video{
+    margin-top: 50px;
+    margin-left: 300px;
+    width: 800px;
+    height: 600px;
+}
