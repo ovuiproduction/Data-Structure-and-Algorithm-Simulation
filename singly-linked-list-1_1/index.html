@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport",
+		content="width=device-width, initial-scale=1.0">
+	<title>singly Linked-list-1</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<div class="mainblock">
+	<div id="typedtext" class="header">singly Linked List</div>
+	<div id="bucket1" class="bucket"></div>
+	<div id="pointer"  class="pointer"></div>
+	<div class="user-block">
+    <div  class="user-input"><input id="input" class="text" type="text" placeholder="Enter data here..." required><input id="input2" class="text" type="text" placeholder="Enter data here..." required></div>
+	<div class="message" title="Overflow & Underflow message" id="msg"></div>	
+	</div>
+    <div class="control">
+        <button class="btn"  id="add-node">Add_Node</button>
+        <button class="btn"  id="del-node">Delete_Node</button>
+		<button class="btn" id="stop">stop</button>
+    </div>
+</div>
+
+	<div id="typedtext" class="header">singly Linked List</div>
+	<div class="code-section">
+		<div class="left-block"></div>
+		<div class="center-block">
+			<div class="code-block">
+				<div class="code">
+					<span class="keyword">struct <span class="word">node</span></span>
+					<div><span>{</span></div>
+					<div><span class="keyword">int</span><span class="word">data</span>;</div>
+					<div><span class="keyword">struct</span><span class="word">node *next</span>;</div>
+					<div><span>};</span></div>
+				</div>
+			</div>
+			<div class="code-block">
+				<div class="code">
+				<div class="struct-declare">
+					<span class="keyword">void <span class="word">insertfront (<span class="keyword">struct</span> Node **head,<span class="keyword"> int</span>data)</span></span>
+					<div class="line"><span>{</span></div>
+					<div class="line"><span class="keyword">struct</span><span class="word">Node *newNode = (<span class="keyword">struct</span> Node *) malloc (<span class="keyword">sizeof</span>(<span class="keyword">struct</span>Node))</span>;</div>
+					<div class="line"><span class="word">newNode ->data = data</span>;</div>
+					<div class="line"><span class="word">newNode ->next = *head</span>;</div>
+					<div class="line"><span class="word">*head = newNode</span>;</div>
+					<div class="line"><span>};</span></div>
+				</div>
+				</div>
+			</div>
+			<div class="code-block">
+				<div class="code">
+				<div class="struct-declare">
+					<span class="keyword">void <span class="word">deletefront (<span class="keyword">struct</span> Node **head,<span class="keyword"> int</span>data)</span></span>
+					<div class="line"><span>{</span></div>
+					<div class="line"><span class="keyword">struct</span><span class="word">Node *temp = *head</span>;</div>
+					<div class="line"><span class="word"><span class="keyword">if</span>(*head == NULL)</span>;</div>
+					<div class="line"><span>{</span></div>
+					<div class="line"><span class="word"><span class="inbuilt">printf</span>(<span class="textmessage">"Linked List Empty , nothing to delete")</span></span>;</div>
+					<div class="line"><span class="word"><span class="keyword">return</span></span>;</div>
+					<div class="line"><span>}</span></div>
+					<div class="line"><span class="word">*head = (*head)->next</span>;</div>
+					<div class="line"><span class="word">free(temp)</span>;</div>
+					<div class="line"><span>};</span></div>
+				</div>
+				</div>
+			</div>
+			<div class="code-block">
+				<div class="code">
+				<div class="struct-declare">
+					<span class="keyword">void</span><span class="word">display(<span class="keyword">struct</span> Node *node)</span>
+					<div class="line"><span>{</span></div>
+					<div class="line"><span class="inbuilt">printf</span>(<span class="textmessage">"Linked List :"</span>);</div>
+					<div class="line"><span class="word"><span class="keyword">while</span>(node != NULL){</span></div>
+					<div class="line"><span class="word"><span class="inbuilt">printf</span>(<span class="textmessage">"%d"</span>,node->data)</span>;</div>
+					<div class="line"><span class="word">node = node->next</span>;</div>
+					<div class="line"><span>}</span></div>
+					<div class="line"><span class="inbuilt">printf(<span class="textmessage">"\n"</span>)</span>;</div>
+					<div class="line"><span>}</span></div>
+				</div>
+				</div>
+			</div>
+			<div class="code-pic">
+				<div class="code-title">file & structure Declaration</div>
+				<div><img class="code-img" src="image/1-17.png" alt="code-sinpet" ></div>
+				<div class="code-title">insert node at index</div>
+				<div><img class="code-img"src="image/18-29.png" alt="code-sinpet" ></div>
+				<div class="code-title">insert node at end</div>
+				<div><img class="code-img"src="image/30-53.png" alt="code-sinpet" ></div>
+				<div class="code-title">function to delete front element & delete at index</div>
+				<div><img class="code-img"src="image/54-71.png" alt="code-sinpet" ></div>
+				<div class="code-title">Delete element at end & Display Linked List</div>
+				<div><img class="code-img"src="image/72-91.png" alt="code-sinpet" ></div>
+				<div class="code-title">Main function</div>
+				<div><img class="code-img"src="image/92-114.png" alt="code-sinpet" ></div>
+			</div>
+		</div>
+		<div class="right-block"></div>
+	</div>
+<script src="index2.js"></script>
+<script src="index.js"></script>
+</body>
+
+</html>
