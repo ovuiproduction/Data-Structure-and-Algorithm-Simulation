@@ -35,7 +35,7 @@ function insert()
 		element.classList.add("link");
 		const element3 = document.createElement("div");
 		element3.classList.add("arrow-1");
-    	element1.innerHTML = data;
+    		element1.innerHTML = data;
 		element.innerHTML ="null";
 		head.innerHTML =`<div class='arrow-2'></div><div id='head' class='head'>head</div>`;
 		input.value="";
@@ -46,7 +46,6 @@ function insert()
 		count = count+1;
 	}
 	else{
-	
 	if(count == 8){
 		const data = input.value;
 		const head = document.createElement("div");
@@ -57,7 +56,7 @@ function insert()
 		element2.classList.add("link");
 		const element3 = document.createElement("div");
 		element3.classList.add("arrow-1");
-    	element1.innerHTML = data;
+    		element1.innerHTML = data;
 		element2.innerHTML = `null`;
 		// element3.classList.add("arrow-1");
 		head.innerHTML =`<div class='arrow-2'></div><div id='head' class='head'>
@@ -71,7 +70,7 @@ function insert()
 		count=count+1;
 		
 	}else{
-		element.innerHTML = stack[count];
+		element.innerHTML = stack[1];
 		const data = input.value;
 		const head = document.createElement("div");
 		head.classList.add("pointer1");
@@ -81,7 +80,7 @@ function insert()
 		element2.classList.add("link");
 		const element3 = document.createElement("div");
 		element3.classList.add("arrow-1");
-    	element1.innerHTML = data;
+    		element1.innerHTML = data;
 		element2.innerHTML = stack[count+1];
 		element3.classList.add("arrow-1");
 		head.innerHTML =`<div class='arrow-2'></div><div id='head' class='head'>${stack[count]}</div>`;
