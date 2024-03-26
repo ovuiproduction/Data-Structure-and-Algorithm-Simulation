@@ -9,7 +9,7 @@
 ### Data Structures
 1. Stack 
 2. Queue
-3.Singly LinkedList
+3. Singly LinkedList
 4. Doubly LinkedList
 
 ### Sorting Algorithms
