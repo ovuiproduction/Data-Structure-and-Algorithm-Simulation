@@ -4,7 +4,7 @@
 
 <p style="text-align:justify">This project addresses the inherent challenges students face in comprehending data structures and algorithms, pivotal concepts in computer science and information technology. Recognizing the difficulties students encounter in learning and grasping these fundamental principles, our focus is on developing an innovative tool that leverages user-interactive animations. Unlike existing online tools that offer prebuilt animations, our approach aims to enhance understanding by providing step-by-step visualizations of data structure and algorithm operations.</p>
 
-## The Concepts of Data Structure covered in project :
+## The Concepts of Data Structure covered in project 
 
 ### Data Structures
 1. Stack 
