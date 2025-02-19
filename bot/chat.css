@@ -111,7 +111,7 @@ th{
     width: 950px;
     height: 55px;
     display: flex;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     position:fixed;
     bottom:3rem;
    left:28%;
