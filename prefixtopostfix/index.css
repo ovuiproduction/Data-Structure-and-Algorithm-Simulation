@@ -1,6 +1,6 @@
 body{
-    background-color:rgb(49, 49, 49);
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRax_YWXeF1Q25y4q9uKRTLwDqdrFOJvpC1cX8pJwjP22E1aheItskXdGfeMPS8KC-W4UXnu3bR5IQ&usqp=CAU&ec=48665701);
+    background-color:rgb(35, 44, 44);
+    /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRax_YWXeF1Q25y4q9uKRTLwDqdrFOJvpC1cX8pJwjP22E1aheItskXdGfeMPS8KC-W4UXnu3bR5IQ&usqp=CAU&ec=48665701); */
 }
 .header{
     margin-top: 20px;

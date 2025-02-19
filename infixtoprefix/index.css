@@ -1,6 +1,7 @@
 body{
-    background-color: rgb(45, 45, 74);
-    background-image:url(https://silentbeacon.com/wp-content/uploads/2018/08/background-1.jpg);
+    background-color:rgb(35, 44, 44);
+    /* background-color: rgb(45, 45, 74);
+    background-image:url(https://silentbeacon.com/wp-content/uploads/2018/08/background-1.jpg); */
 }
 .header{
     margin-top: 20px;

@@ -1,6 +1,6 @@
 body{
 	background-color: rgb(191, 215, 192);
-	background-image:url(https://thumbs.gfycat.com/PleasantShadowyDuckbillplatypus-mobile.jpg);
+	/* background-image:url(https://thumbs.gfycat.com/PleasantShadowyDuckbillplatypus-mobile.jpg); */
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -117,12 +117,11 @@ button:active{
 	justify-content: center;
 	align-items: center;
 	border-radius: 5px;
-	border: 1px solid rgb(243, 115, 115);
 	width: 400px;
 	height: 120px;
 	margin-top: 40px;
 	margin-left: 200px;
-	background-color:pink;
+	background-color:rgb(87, 112, 120);
 	color:rgb(43, 255, 15);
 }
 .user-input input{
@@ -181,7 +180,7 @@ button:active{
 	margin-right:10px;
 	width:auto;
 	height:auto;
-	border:2px solid rgb(25, 211, 32);
+	/* border:2px solid rgb(25, 211, 32); */
 	column-gap: 100px;
 	/* overflow: auto;
 	overflow:scroll;
@@ -192,7 +191,7 @@ button:active{
 	align-items: center;
 	width:92px;
 	height:106px;
-	border:2px solid rgb(25, 211, 32);
+	/* border:2px solid rgb(25, 211, 32); */
 	/* margin-left: 10px; */
 }
   .head{

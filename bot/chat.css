@@ -4,7 +4,7 @@ body{
 }
 .interface{
     background-color:rgb(49, 47, 58);
-    border: 2px  solid white;
+    /* border: 2px  solid white; */
     /* border-bottom: 2px; */
     width:100%;
     height:100%;
@@ -37,7 +37,7 @@ body{
     display: flex;
     width: 300px;
     height:100%;
-    border: 2px solid rgb(229, 224, 224);
+    /* border: 2px solid rgb(229, 224, 224); */
     position:fixed;
 }
 .newchat{
@@ -108,13 +108,13 @@ th{
     align-items: center;
 }
 .chat_input{
-    margin-top: 50px;
-    margin-left: 430px;
     width: 950px;
     height: 55px;
     display: flex;
     border: 1px solid white;
     position:fixed;
+    bottom:3rem;
+   left:28%;
 }
 input{
     font-size: 20px;
@@ -148,7 +148,7 @@ img{
     align-items: center;
     width:900px;
     height:auto;
-    border: 2px solid rgb(38, 150, 18);
+    /* border: 2px solid rgb(38, 150, 18); */
     border-bottom: none;
     margin-left: 430px;
     margin-top: 50px;
@@ -190,7 +190,7 @@ img{
     align-items: center;
     padding:5px;
     height:50px;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     color: aliceblue;
     background-color: rgb(41, 41, 45);
     word-wrap: break-word;
@@ -207,7 +207,7 @@ img{
     /* padding:5px; */
     /* width: 900px; */
     height:auto;
-    border: 1px solid white;
+    border: 1px solid rgb(67, 67, 68);
     color: rgb(238, 241, 244);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:17px ;

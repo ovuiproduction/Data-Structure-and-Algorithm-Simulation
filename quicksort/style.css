@@ -1,5 +1,6 @@
 body{
-    background-color: rgb(136, 136, 227);
+    background-color: rgb(35, 35, 35);
+    color: white;
 }
 .sorting{
     display: flex;
@@ -43,7 +44,7 @@ body{
     font-size: 30px;
     font-family: cursive;
     font-weight: 600;
-    color: rgb(0, 0, 209);
+    color: white;
 }
 .action2{
     width: 100%;
@@ -81,7 +82,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 240px;
     height: 50px;
     margin-top:50px;
@@ -203,7 +204,7 @@ body{
     margin-bottom: 0px;
     margin-left: 30px;
     margin-right: 30px;
-    border: 1px solid lightblue;
+    /* border: 2px solid rgb(255, 255, 255); */
 }
 .vertical-1{
     width: 20px;
@@ -215,6 +216,8 @@ body{
 .horizontal{
     width: 115px;
     height: 20px;
+    /* color: white;
+    background-color: white; */
     /* border: 1px solid black; */
     margin-left: 325px;
 }
@@ -244,7 +247,7 @@ body{
     top: 0;
     height:50%;
     width: 50%;
-    background: #2c3e50;
+    background: white;
 }
 .arrow:before {
     left: 0;
@@ -283,6 +286,7 @@ body{
     transform: translate(-50%, -10%);
     transform: rotate(90deg);
     cursor: pointer;
+    
 }
 
 .arrowh span {
@@ -290,10 +294,11 @@ body{
     display: block;
     width:10px;
     height: 10px;
-    border-bottom: 3px solid rgb(21, 14, 14);
-    border-right: 3px solid rgb(5, 4, 4);
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
     transform: rotate(45deg);
     animation: animate 2s infinite;
+   
 }
 
 .arrowh span:nth-child(2) {
@@ -331,7 +336,7 @@ body{
 }
 .step1{
     font-size: 40px;
-    color:darkblue;
+    color:white;
     height: max-content;
     margin-top: 50px;
     /* border: 1px solid black; */
@@ -352,7 +357,7 @@ body{
 }
 .step3{
     font-size: 20px;
-    color:darkblue;
+    color:white;
     height: max-content;
     margin-top: 50px;
     /* border: 1px solid black; */
@@ -456,18 +461,18 @@ body{
     height: max-content;
     padding:5px;
     column-gap: 5px;
-    border: 1px solid rgb(94, 202, 117);
+    /* border: 1px solid rgb(94, 202, 117); */
 }
 .arrele1{
-    background-color: rgb(38, 255, 0);
+    /* background-color: rgb(38, 255, 0); */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 30px;
     font-family: cursive;
     font-weight: 800;
-    color: rgb(10, 10, 22);
+    color: white;
     width: 100px;
     height: 60px;
-    border: 1px solid lightblue;
+    border: 1px solid white;
 }

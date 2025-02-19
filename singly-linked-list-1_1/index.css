@@ -1,6 +1,9 @@
 body{
-	background-color: rgb(255, 252, 80);
-	background-image:url(https://wallpaperaccess.com/full/809177.jpg) ;
+	background-color: #26282b;
+	color: white !important;
+	padding-bottom:5rem;
+	/* background-image:url(https://wallpaperaccess.com/full/809177.jpg) ; */
+	
 }
 .header{
 	
@@ -30,7 +33,7 @@ body{
 	margin-right:50px;
 	width:auto;
 	height:100px;
-	color: black;
+	color: white !important;
 }
 .user-block{
 	/* border: 1px solid black; */
@@ -66,8 +69,11 @@ body{
 	width: 150px;
 	height: 50px;
 	color: rgb(40, 2, 255);
-	background-color: lawngreen;
-	border: 2px solid rgb(30, 124, 12);
+	background-color:white;
+	border: 2px solid gray;
+}
+.btn:hover{
+	border:1px solid white;
 }
 .message{
 	font-weight: 800;
@@ -76,13 +82,13 @@ body{
 	justify-content: center;
 	align-items: center;
 	border-radius: 5px;
-	border: 1px solid rgb(239, 100, 100);
+	border: 1px solid gray;
 	width: 400px;
 	height: 120px;
 	margin-top: 40px;
 	margin-left: 200px;
-	background-color:pink;
-	color:rgb(43, 255, 15);
+	background-color:rgb(34, 34, 38);
+	color:white;
 }
 .user-input input{
 	background-color: rgb(43, 42, 56);
@@ -116,7 +122,7 @@ body{
 	align-items: center;
 	width: 50px;
 	height: 50px;
-	border: 2px solid rgb(17, 212, 20);
+	border: 2px solid rgb(17, 249, 17);
 	border-left: 0px;
 	background-color: rgb(12, 18, 19);
 }
@@ -126,6 +132,7 @@ body{
     width:60px;
     height:30px;
     display: flex;
+	color: #2c2e32;
 	/* border: 2px solid rgb(37, 188, 26); */
   }
   .arrow-1:before {
@@ -133,7 +140,7 @@ body{
     background: currentColor;
     width:15px;
     clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
-    animation: a1 1.7s infinite linear;
+    animation: a1 3s infinite linear;
   }
   @keyframes a1 {
     90%,100%{flex-grow: 1}
@@ -161,7 +168,7 @@ body{
 	margin-left:10px;
 	width:100px;
 	height:106px;
-	border:2px solid rgb(25, 211, 32);
+	/* border:2px solid rgb(25, 211, 32); */
 }
 
   .head{
@@ -174,7 +181,7 @@ body{
 	margin-top:10px;
 	justify-content: center;
 	align-items: center;
-	border:2px solid rgb(45, 224, 22);
+	border:2px solid gray;
 	width:90px;
 	height:50px;
   }
@@ -185,7 +192,7 @@ body{
 	display: flex;
     width:50px;
     height:30px;
-	border: 2px solid rgb(191, 215, 192);
+	/* border: 2px solid rgb(191, 215, 192); */
 	transform: rotate(-90deg);
   }
   .arrow-2:before {
@@ -193,7 +200,7 @@ body{
     background: currentColor;
     width:10px;
     clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
-    animation: a1 1.7s infinite linear;
+    animation: a1 3s infinite linear;
   }
   @keyframes a1 {
     90%,100%{flex-grow: 1}
@@ -289,3 +296,7 @@ body{
 	color: aliceblue;
    }
    
+   .text{
+	padding:2rem;
+    border: 1px solid gray;
+   }

@@ -1,8 +1,9 @@
 body{
-    background-color: rgb(73, 70, 77);
+    /* background-color: rgb(73, 70, 77);
     background-image: url(https://e0.pxfuel.com/wallpapers/168/245/desktop-wallpaper-purple-color-plain-abstract.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color:rgb(35, 44, 44);
 }
 .header{
     margin-top: 20px;

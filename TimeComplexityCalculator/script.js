@@ -157,14 +157,14 @@ if(time[c-1] == 'N1' && time[c-2] == "N2"){
 
 if(time[c-1] == 'N1' && time[c-2] == "N2"){
     explaination1.innerHTML = str1.join(' ');
-    explaination1.style.backgroundColor="yellow";
+    explaination1.style.backgroundColor="black";
     explaination1.style.wordSpacing="5px";
     explaination2.innerHTML = str2.join(' ');
-    explaination2.style.backgroundColor="yellow";
+    explaination2.style.backgroundColor="black";
     explaination3.innerHTML = str3.join(' ');
     explaination4.innerHTML = str4.join(' ');
     explaination5.innerHTML = str5.join(' ');
-    explaination5.style.backgroundColor="yellow";
+    explaination5.style.backgroundColor="black";
     timearray.innerHTML = "<p>N*N + N = N^2 + N ~ N^2</p><p>Nested for Loops</p>";
     output.innerHTML = "<h1>O(N^2)</h1>";
     
@@ -172,10 +172,10 @@ if(time[c-1] == 'N1' && time[c-2] == "N2"){
 
  else if(time.includes("N2") == true){
     explaination1.innerHTML = str1.join(' ');
-    explaination1.style.backgroundColor="yellow";
+    explaination1.style.backgroundColor="black";
     explaination1.style.wordSpacing="5px";
     explaination2.innerHTML = str2.join(' ');
-    explaination2.style.backgroundColor="yellow";
+    explaination2.style.backgroundColor="black";
     explaination3.innerHTML = str3.join(' ');
     explaination4.innerHTML = str4.join(' ');
     timearray.innerHTML = "<p>N*N = N^2</p><p>Nested for Loops</p>";
@@ -183,11 +183,11 @@ if(time[c-1] == 'N1' && time[c-2] == "N2"){
   }
   else if(time.includes("N2") == false && time.includes("N1") == true){
     explaination1.innerHTML = str1.join(' ');
-    explaination1.style.backgroundColor="yellow";
+    explaination1.style.backgroundColor="black";
     explaination2.innerHTML = str3.join(' ');
     if(n1 == 2){
         explaination3.innerHTML = str2.join(' ');
-        explaination3.style.backgroundColor="yellow";
+        explaination3.style.backgroundColor="black";
         explaination4.innerHTML = str4.join(' ');
         timearray.innerHTML = "<p>N+N ==>> 2N ~ N</p>";
     }

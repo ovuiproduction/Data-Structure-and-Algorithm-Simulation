@@ -5,7 +5,7 @@ body{
 }
 .nav{
     background-color: rgb(36, 27, 117);
-    border: 2px solid rgb(148, 22, 135);
+    /* border: 2px solid rgb(148, 22, 135); */
     display: flex;
     width:1520px;
     height:50px;
@@ -29,7 +29,7 @@ body{
     text-decoration:underline;
 }
 .container{
-    border: 1px solid rgb(225, 211, 17);
+    /* border: 1px solid rgb(225, 211, 17); */
     width:1520px;
     height:max-content;
     padding-bottom: 30px;

@@ -1,21 +1,18 @@
 body{
     margin: 0px;
-    background-image: url(https://i.gifer.com/6zvA.gif);
-    background-size:500px 500px;
+    padding:0px;
+    background-color: rgb(43, 43, 55);
 }
-.maincontainer{
-    padding-bottom: 100px;
-    /* background-color: rgb(6, 7, 9); */
-}
+
 .navbar{
-    width: 1523px;
-    background-color: rgb(29, 19, 55);
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(36, 36, 49);
     display: flex;
     height:50px;
-    border:2px solid rgb(137, 98, 247);
 }
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
   
   /* Track */
@@ -34,6 +31,10 @@ body{
   ::-webkit-scrollbar-thumb:hover {
     background: #fffefe; 
   }
+
+  .navbar a{
+    text-decoration: none;
+  }
 .home{
     display: flex;
     justify-content: center;
@@ -42,9 +43,10 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 300;
     height:40px;
-    color: chartreuse;
+    color: rgb(255, 255, 255);
     margin-top: 5px;
     margin-left: 30px;
+    text-decoration: none;
 }
 .Linked-List{
     display: flex;
@@ -97,11 +99,7 @@ body{
 .Queue a:hover{
     color:white;
 }
-.articalcontainer{
-    width:1523px;
-    height:100vh;
-    border: 1px solid rgb(139, 214, 132);
-}
+
 .header{
     width: 1500px;
     height: 100px;
@@ -126,7 +124,6 @@ body{
     justify-content: center;
     align-items: center;
     width:1500px;
-    height: 250px;
     column-gap: 100px;
 }
 .upperblock{
@@ -179,21 +176,22 @@ body{
     align-items: center;
     width:1500px;
     height: 250px;
-    /* border: 2px solid rgb(255, 26, 118); */
     column-gap: 80px;
 }
 
 
 .dropbtn {
-    background-color: rgb(29, 19, 55);
-    color: white;
+    background-color: rgb(36, 36, 49);
+    color:gray;
     padding: 16px;
     font-size: 16px;
     border: none;
+    outline: none;
+    cursor: pointer;
   }
   
   .dropdown {
-    margin-left: 100px;
+    margin-left:2rem;
     position: relative;
     display: inline-block;
   }
@@ -218,7 +216,7 @@ body{
   
   .dropdown:hover .dropdown-content {display: block;}
   
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  .dropdown:hover .dropbtn {color: white;}
   
 .head a:hover{
     color:aliceblue;

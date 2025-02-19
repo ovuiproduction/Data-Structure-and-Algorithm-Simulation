@@ -1,5 +1,6 @@
 body{
 	background-color: rgb(191, 213, 215);
+	padding-bottom:3rem;
 }
 .bucket{
 	display: flex;
