@@ -2,8 +2,6 @@ body{
 	background-color: #26282b;
 	color: white !important;
 	padding-bottom:5rem;
-	/* background-image:url(https://wallpaperaccess.com/full/809177.jpg) ; */
-	
 }
 .header{
 	
@@ -17,9 +15,6 @@ body{
 
 .mainblock{
 	padding: 10px;
-	/* background-image:url(https://media.istockphoto.com/id/1208157127/vector/yellow-and-orange-unusual-background-with-subtle-rays-of-light.jpg?s=612x612&w=0&k=20&c=u44qz5sn2yR50ouFBUVZauj26hN-BEGQ2DBY6x-h21s=);
-	background-repeat: no-repeat;
-	background-size: cover; */
 }
 
 .bucket{
@@ -300,3 +295,16 @@ body{
 	padding:2rem;
     border: 1px solid gray;
    }
+
+   ::-webkit-scrollbar {
+	width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+	background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+	background: #555;
+	border-radius: 4px;
+  }
