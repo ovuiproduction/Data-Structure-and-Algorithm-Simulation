@@ -3,7 +3,7 @@ stack =[ 'X10h' ,'F20h', 'A224' ,'490h' ,'X780','930X','F456','0F87','0A54','0E6
 stack1=[];
 const push = document.getElementById("add-node");
 const input = document.getElementById("input");
-const input2 = document.getElementById("input2");
+// const input2 = document.getElementById("input2");
 const addinput = document.getElementById("addressinput");
 const pop = document.getElementById("del-node");
 const box = document.getElementById("bucket1");
@@ -58,7 +58,7 @@ function insert()
 		head.classList.add("pointer");
 		head.innerHTML =`<div class='arrow-2'></div><div id='head' class='head'>${stack[count]}</div>`;
 		input.value="";
-		input2.value="";
+		// input2.value="";
 		box.appendChild(node);
 		pointer.appendChild(head);
 	}
@@ -77,7 +77,7 @@ function insert()
 		head.classList.add("pointer");
 		head.innerHTML =`<div class='arrow-2'></div><div id='head' class='head'>${stack[count]}</div>`;
 		input.value="";
-		input2.value="";
+		// input2.value="";
 		box.appendChild(node);
 		pointer.appendChild(head);
 	}

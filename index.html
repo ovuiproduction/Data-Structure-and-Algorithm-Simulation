@@ -5,87 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DSA Visualizer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <!-- <a class="navbar-brand" href="/loginweb/isecure.html">Isecure</a> -->
-      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size:25px;" aria-current="page" href="index.html">DSA Visualizer</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="signup.html">SignUp</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="logout.html">LogOut</a>
-          </li> -->
-          <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-code"></i> DSA Visualizer
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Home/index.html">Data Structures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./bot/chat.html">Code Chat</a>
+            </li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li> -->
-      </ul>
-      <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
-    </div>
-  </div>
-</nav>
-    <div class="welcomecontainer">
-    <div class="username">Welcome</div>
-    <div class="contentcontainer">
-      <div class="contentbox">
-        <div class="headtitle">Data Structure & Animation</div>
-        <div class="contentblock">
-        <!-- <div class="content1">
-          <div class="contentimg">
-              <a href="sorting/index.html"><img src="https://www.freecodecamp.org/news/content/images/2021/06/sorting.png" alt=""></a>
-          </div>
-          <a href="sorting/index.html"><p class="contenttag">Sorting Algo</p></a>
-        </div> -->
-        <div class="content1">
-        <div class="contentimg" >
-              <a href="./welcomeDSA/index.html"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--rjxO02ux--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w4qxi1gsnhuey77654qj.png" alt=""></a>
-          </div>
-          <a href="./welcomeDSA/index.html"><p class="contenttag">Data Structure & Algo</p></a>
-        </div>
-        <div class="content1">
-        <div class="contentimg">
-              <a href="./bot/chat.html"><img src="https://www.premierbpo.com/wp-content/uploads/2023/02/chatbot-3d-illustration-concept-web-app-using-nlp-engage-conversation-1-scaled.jpg" alt=""></a>
-          </div>
-          <a href="./bot/chat.html"><p class="contenttag">code_chat</p></a>
-        </div>
         </div>
       </div>
-    <div class="div0">
-    <div class="div1">
-      <img src="https://dz2cdn1.dzone.com/storage/temp/12334613-971.jpg" alt="" srcset="">
-    </div>
-    </div>
-    </div>
-  </div>
+    </nav>
+
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to DSA Visualizer</h1>
+        <p>Learn Data Structures and Algorithms through interactive animations and visualizations.</p>
+        <a href="./Home/index.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2>What We Offer</h2>
+        <div class="feature-cards">
+          <div class="feature-card">
+            <i class="fas fa-sitemap fa-3x"></i>
+            <h3>Data Structures & Algorithms</h3>
+            <p>Visualize and understand fundamental data structures and algorithms including stacks, queues, linked lists, and sorting techniques.</p>
+            <a href="./Home/index.html" class="btn btn-outline-primary">Explore Structures</a>
+          </div>
+          
+          <div class="feature-card">
+            <i class="fas fa-exchange-alt fa-3x"></i>
+            <h3>Expression Conversion</h3>
+            <p>Step-by-step visualization of expression conversions (infix, postfix, prefix) with algorithmic explanations.</p>
+            <a href="./Home/index.html" class="btn btn-outline-primary">Explore Conversions</a>
+          </div>
+          
+          <div class="feature-card">
+            <i class="fas fa-lock fa-3x"></i>
+            <h3>Encryption Algorithms</h3>
+            <p>Interactive demonstrations of encryption techniques including RSA, AES, and cryptographic hash functions.</p>
+            <a href="./Home/index.html" class="btn btn-outline-primary">Explore Security</a>
+          </div>
+          
+          <div class="feature-card">
+            <i class="fas fa-comments fa-3x"></i>
+            <h3>Code Assistant</h3>
+            <p>AI-powered coding companion for real-time problem solving and concept explanations in DSA and programming.</p>
+            <a href="./bot/index.html" class="btn btn-outline-primary">Start Chatting</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 DSA Visualizer</p>
+        <div class="social-links">
+          <a href="https://github.com/ovuiproduction"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/onkar-waghmode-85638125a/"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
   </body>
 </html>
-

@@ -14,8 +14,9 @@ var data;
 var count =0;
 var arr = [];
 var  a =0;
-    // stack for infix to prefix
 
+let completeFlag = false;
+   
     class Stack {
         constructor() {
             this.items = [];
@@ -55,11 +56,15 @@ var  a =0;
     }
     let stack = new Stack();
 
-    function addtostack(exp){
+    function addtostack(exp) {
         stack.add(exp);
+        // appendLog(`${exp} pushed to stack`);
     }
-    function removefromstack(){
+    
+    function removefromstack() {
+        const elem = peekfromstack();
         stack.remove();
+        // appendLog(`${elem} popped from stack`);
     }
     function peekfromstack(){
        return stack.peek();
@@ -162,7 +167,9 @@ function driver(){
 }
 function start()
 {
-    nextButton.addEventListener("click" ,next);
+    nextButton.addEventListener("click" ,()=>{
+        if(!completeFlag) next();
+    });
     var i = 0;
     function next(){
         count = count + 1;
@@ -192,9 +199,9 @@ function start()
                     break;
             }
         }
-        if(count > (array.length+1)){
-            answerBox.innerHTML="OPERATION SUCCESSFUL";
-            sms1.innerHTML = "Postfix String :  " +arr.reverse().join("");
+        if(count > (array.length+1)) {
+            answerBox.textContent = "OPERATION SUCCESSFUL";
+            appendLog(`Final postfix string: ${arr.reverse().join("")}`);
             return;
         }
         if(count == array.length+1){
@@ -203,6 +210,7 @@ function start()
                  printalpha(peekfromstack());
                  opratorStack.removeChild(opratorStack.lastElementChild);
                  removefromstack();
+                 completeFlag=true;
              }
              final2();
              return;
@@ -240,26 +248,29 @@ function start()
         }
     }   
 }
-// function for print alphabets to answer box
-function printalpha(exp){
+
+function printalpha(exp) {
     const alphanum = document.createElement("div");
     alphanum.classList.add("alpha");
-    alphanum.innerHTML = exp;
+    alphanum.textContent = exp;
     ansFlat.appendChild(alphanum);
     arr[a] = exp;
-    a = a+1;
-    sms1.innerHTML = exp + " is added to Output String."
-}  
-function addstackanimation(exp){
+    a++;
+    appendLog(`${exp} added to output string`);
+}
+// function for print alphabets to answer box
+function addstackanimation(exp) {
     const oprand = document.createElement("div");
     oprand.classList.add("oprator-box");
-    oprand.innerHTML = exp;
+    oprand.textContent = exp;
     opratorStack.appendChild(oprand);
-    sms1.innerHTML = exp + " is Pushed to Stack."
+    appendLog(`${exp} pushed to stack`);
 }
-function removestackelement(){
-    sms1.innerHTML = opratorStack.lastElementChild + " is Poped from Stack."
+
+function removestackelement() {
+    const elem = opratorStack.lastElementChild.textContent;
     opratorStack.removeChild(opratorStack.lastElementChild);
+    appendLog(`${elem} popped from stack`);
 }
 // function for priority
 function priority(exp){
@@ -277,13 +288,29 @@ function priority(exp){
     }   
 }
 
-function final2(){
-    // const f = document.createElement("div");
-    // f.classList.add("final-ans");
-    finalAns.innerHTML = arr.reverse().join("");
-    // finalAns.appendChild(f);
+function appendLog(message) {
+    const logEntry = document.createElement('div');
+    logEntry.classList.add('log-entry');
+    logEntry.innerHTML = `
+        <span class="log-message">${message}</span>
+    `;
+    sms1.appendChild(logEntry);
+    // Auto-scroll to bottom
+    sms1.scrollTop = sms1.scrollHeight;
 }
+
+function final2() {
+    finalAns.textContent = arr.reverse().join("");
+    appendLog(`Final result displayed: ${finalAns.textContent}`);
+}
+
 // reset all 
+resetall.addEventListener("click",clearAll);
+
+function clearAll()
+{
+    location.reload();
+}
 
 
 

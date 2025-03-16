@@ -2,7 +2,7 @@
 stack =[ 'X10h' ,'F20h', 'A224' ,'490h' ,'X780','930X','F456','0F87','0A54','0E64','09C5'];
 const push = document.getElementById("add-node");
 const input = document.getElementById("input");
-const input2 = document.getElementById("input2");
+// const input2 = document.getElementById("input2");
 const addinput = document.getElementById("addressinput");
 const pop = document.getElementById("del-node");
 const box = document.getElementById("bucket1");
@@ -24,9 +24,19 @@ function insert()
 		return;
 	}
 
+	if(count>8){
+		alert.innerHTML = "Limit Exceeded.";
+		alert.classList.add("error-massage");
+		setTimeout(() => {
+			alert.classList.remove("error-massage");
+			alert.innerHTML="";
+		}, 1200);
+		return;
+	}
+
 	if(count==0){
 		const data = input.value;
-		const link = input2.value;
+		// const link = input2.value;
 		const head = document.createElement("div");
 		head.classList.add("pointer1");
 		const element1 = document.createElement("div");
@@ -39,11 +49,12 @@ function insert()
 		element.innerHTML ="null";
 		head.innerHTML =`<div class='arrow-2'></div><div id='head' class='head'>head</div>`;
 		input.value="";
-		input2.value="";
+		// input2.value="";
 		box.appendChild(element1);
 		box.appendChild(element);
 		pointer.appendChild(head);
 		count = count+1;
+		stop3();
 	}
 	else{
 	if(count == 8){
@@ -62,13 +73,13 @@ function insert()
 		head.innerHTML =`<div class='arrow-2'></div><div id='head' class='head'>
 		${stack[count]}</div>`;
 		input.value="";
-		input2.value="";
+		// input2.value="";
 		box.appendChild(element3);
 		box.appendChild(element1);
 		box.appendChild(element2);
 		pointer.appendChild(head);
 		count=count+1;
-		
+		stop3();
 	}else{
 		element.innerHTML = stack[1];
 		const data = input.value;
@@ -82,15 +93,18 @@ function insert()
 		element3.classList.add("arrow-1");
     		element1.innerHTML = data;
 		element2.innerHTML = stack[count+1];
+		box.lastElementChild.innerHTML = stack[count];
 		element3.classList.add("arrow-1");
 		head.innerHTML =`<div class='arrow-2'></div><div id='head' class='head'>${stack[count]}</div>`;
 		input.value="";
-		input2.value="";
+		// input2.value="";
 		box.appendChild(element3);
 		box.appendChild(element1);
 		box.appendChild(element2);
 		pointer.appendChild(head);
 		count=count+1;
+
+		stop3();
 	}
 	}
 }
@@ -115,8 +129,10 @@ function del()
 	box.removeChild(box.lastElementChild);
 	box.removeChild(box.lastElementChild);
 	pointer.removeChild(pointer.lastElementChild);
+	stop3();
 }
 stop1.addEventListener("click",stop3);
+
 function stop3()
 {
 	box.lastElementChild.innerHTML = `null`;

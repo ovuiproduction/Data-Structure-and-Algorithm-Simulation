@@ -10,6 +10,10 @@ const nextButton = document.getElementById("next-button");
 const resetall = document.getElementById("reset");
 const sms = document.getElementById("alert-js");
 const sms1 = document.getElementById("alert-js1");
+let completeFlag = false;
+
+let operationLogs = [];
+
 var data;
 var count =0;
 var arr = [];
@@ -55,14 +59,19 @@ var  a =0;
     }
     let stack = new Stack();
 
-    function addtostack(exp){
+    function addtostack(exp) {
         stack.add(exp);
-        sms1.innerHTML = exp +" is Pushed to Stack";
+        logOperation(`${exp} pushed to stack`);
+        // updateStackVisual(exp, 'push');
     }
-    function removefromstack(){
-        sms1.innerHTML = peekfromstack() +" is poped to Stack";
+    
+    function removefromstack() {
+        const popped = peekfromstack();
         stack.remove();
+        logOperation(`${popped} popped from stack`);
+        // updateStackVisual(popped, 'pop');
     }
+    
     function peekfromstack(){
        return stack.peek();
     }
@@ -164,7 +173,9 @@ function driver(){
 }
 function start()
 {
-    nextButton.addEventListener("click" ,next);
+    nextButton.addEventListener("click" ,()=>{
+        if(!completeFlag) next();
+    });
     var i = 0;
     function next(){
         count = count + 1;
@@ -201,10 +212,10 @@ function start()
         }
         if(count == array.length+1){
             while(!isEmptystack()){
-                 answerBox.innerHTML="MISSION SUCCESSFUL";
-                 printalpha(peekfromstack());
-                 opratorStack.removeChild(opratorStack.lastElementChild);
-                 removefromstack();
+                let popped_element = peekfromstack();
+                opratorStack.removeChild(opratorStack.lastElementChild);
+                removefromstack();
+                printalpha(popped_element);
              }
              return;
          }
@@ -233,11 +244,12 @@ function start()
                         if(priority(exp) <= priority(peekfromstack())){
                         while(priority(exp) <= priority(peekfromstack())){
                             // stack to answer box
-                            printalpha(peekfromstack());
+                            let popped_element  = peekfromstack();
                             // remove from stack
                             removefromstack();
                             // remove from stack visual
                             opratorStack.removeChild(opratorStack.lastElementChild);
+                            printalpha(popped_element);
                         }
                             // new element is added to stack
                             addtostack(exp);
@@ -324,16 +336,19 @@ function start()
         }
     }   
 }
-// function for print alphabets to answer box
-function printalpha(exp){
+function printalpha(exp) {
     const alphanum = document.createElement("div");
     alphanum.classList.add("alpha");
-    alphanum.innerHTML = exp;
+    alphanum.textContent = exp;
     ansFlat.appendChild(alphanum);
     arr[a] = exp;
-    a = a+1;
-    sms1.innerHTML = exp +" is insert to output string ";
-}  
+    a++;
+    logOperation(`${exp} added to output`);
+    
+    // Add highlight animation
+    alphanum.classList.add('highlight');
+    setTimeout(() => alphanum.classList.remove('highlight'), 300);
+}
 // function for priority
 function priority(exp){
     switch(exp){
@@ -350,24 +365,43 @@ function priority(exp){
     }   
 }
 
-function final2(){
-    // const f = document.createElement("div");
-    // f.classList.add("final-ans");
-    finalAns.innerHTML = arr.reverse().join("");
-    sms1.innerHTML = "Prefix string : " + arr.join("") ;
-    // finalAns.appendChild(f);
+function logOperation(message) {
+    const logEntry = document.createElement('div');
+    logEntry.classList.add('log-entry');
+    logEntry.innerHTML = `
+        <span class="log-message">${message}</span>
+    `;
+    sms1.appendChild(logEntry);
+    sms1.scrollTop = sms1.scrollHeight; // Auto-scroll to bottom
+}
+function updateStackVisual(element, action) {
+    if (action === 'push') {
+        const stackItem = document.createElement("div");
+        stackItem.classList.add("oprator-box");
+        stackItem.textContent = element;
+        opratorStack.appendChild(stackItem);
+        stackItem.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        if (opratorStack.lastElementChild) {
+            opratorStack.lastElementChild.classList.add('removing');
+            setTimeout(() => {
+                opratorStack.removeChild(opratorStack.lastElementChild);
+            }, 300);
+        }
+    }
+}
+
+function final2() {
+    finalAns.textContent = arr.reverse().join("");
+    logOperation(`Final prefix string: ${finalAns.textContent}`);
+    completeFlag = true;
+    // Add final animation
+    finalAns.classList.add('final-result');
+    setTimeout(() => finalAns.classList.remove('final-result'), 1000);
 }
 // reset all 
-resetall.addEventListener("click",clear1);
+resetall.addEventListener("click",clearAll);
 
-function clear1()
-{
-    // ansFlat.innerHTML ="";
-    // infix.innerHTML ="";
-    // answerBox.innerHTML = "Elements of expression";
-    // count = 0;
-    // clearstack();
+function clearAll() {
+    location.reload();
 }
-
-
-

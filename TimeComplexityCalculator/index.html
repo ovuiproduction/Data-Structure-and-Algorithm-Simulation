@@ -4,26 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./index.css">
     <title>Time Complexity Calculator</title>
 </head>
 <body>
-        <input id="input" type="text" class="input" placeholder="Paste Code here"/>
-        <button id="button" onclick="printInput()">Get Ouput</button>
-        <div class="codeinput" id="code"></div>
-        <br>
-        <div class="h2" id="explain1"></div>
-        <div class="h2" id="explain2"></div>
-        <div class="h2" id="explain3"></div>
-        <div class="h2" id="explain4"></div>
-        <div class="h2" id="explain5"></div>
-        <br>
-        <div class="calculation" id="timecalculate"></div>
-        <br>
-        <div class="h1" id="test"></div>
-        <h2 id="output"></h2>
-       
-
+    <textarea id="input" type="text" class="input" placeholder="Paste Code here"></textarea>
+    <div class="codeinput" id="code"></div>
+    <button id="button" onclick="printInput()">Get Output</button>
+    <br>
+    <div id="explain"></div>
+    <br>
+    <div class="calculation" id="timecalculate"></div>
+    <br>
+    <div class="h1" id="test"></div>
+    <h2 id="output"></h2>
 </body>
-<script src="script.js"></script>
+<script src="./index.js"></script>
 </html>

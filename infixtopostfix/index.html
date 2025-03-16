@@ -4,44 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    <title>infixtopostfix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>Infix to Postfix Converter</title>
 </head>
 <body>
-    <div class="header">infix to postfix</div>
+    <div class="header">Infix to Postfix</div>
     <div class="container">
-        <div class="main-container">
+        <!-- <div class="main-container"> -->
+            <!-- Input Section -->
             <div class="input-alert-submit">
-        <div class="input-submit-block">
-            <input id="input-text" class="input-infix" type="text" required placeholder="enter infix expression here...">
-            <button id="go-btn" class="submit-btn">submit</button>
-        </div>
-        <div id="alert-js1" class="alert">message</div>
+                <div class="input-submit-block">
+                    <textarea 
+                        id="input-text" 
+                        class="input-infix" 
+                        placeholder="Enter infix expression (e.g., a+b*c)..."
+                        spellcheck="false"></textarea>
+                    <div class="button-group">
+                        <button id="go-btn" class="submit-btn">Convert</button>
+                        <button id="reset" class="resetbtn">Reset</button>
+                    </div>
+                </div>
+                <div class="alert-container">
+                    <label class="label-msg" for="alert-js">Message</label>
+                    <div id="alert-js1" class="alert"></div>
+                    <label class="label-msg" for="final-ans-block">Answer</label>
+                    <div id="final-ans-block" class="answer-block"></div>
+                </div>
+            </div>
+
+            <!-- Visualization Section -->
+            <div class="solution-block">
+                <div class="solution-header">
+                    <div id="infix-exp" class="title-solution"></div>
+                    <div class="step-counter">Step: <span id="step-count">0</span></div>
+                </div>
+                
+                <div class="answer-engine">
+                    <div class="processing-section">
+                        <div class="pre-answer">
+                            <div class="ans-title">Current Element:</div>
+                            <div id="answer-field" class="current-element"></div>
+                            <button id="next-button" class="next-button-css">Next Step →</button>
+                        </div>
+                        <div id="ans-flat" class="ans-flat-css"></div>
+                    </div>
+                    
+                    <div class="stack-visualization">
+                        <div class="msg_bucket">
+                            <div class="stack-container">
+                                <label class="operation-box-label">Operator Stack</label>
+                                <div id="oprator-stack" class="oprator-bucket"></div>
+                            </div>
+                            <div class="log-container">
+                                <label class="operation-box-label">Operations Log</label>
+                                <div id="alert-js" class="alert1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
     </div>
-        <div class="solution-block">
-            <div class="expression-reset">
-        <div id="infix-exp" class="title-solution"></div>
-        <div id="reset" class="resetbtn">reset</div></div>
-        <div class="answer-engine">
-        <div class="pre-answer">
-            <div class="ans-title">Ele.</div>
-            <div id="answer-field" class="answer">Elements of expression </div>
-            <div id="next-button" class="next-button-css">next</div>
-        </div>
-        <div id="answer-stack"  class="stack-block">
-            <div id="ans-flat" title="charecters of prefix" class="ans-flat-css"></div>
-            <div class="msg_bucket">
-            <div id="oprator-stack" class="oprator-bucket"></div>
-            <div id="alert-js" class="newmsg">message</div>
-        </div>
-        </div>
-        </div>
-        <div id="final-ans-block" title="final answer" class="answer-block"></div>
-    </div>
-    </div>
-    </div>
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-<script src="backup.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </html>

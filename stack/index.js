@@ -1,154 +1,118 @@
-//variable Declaration
-const push = document.querySelector(".push");
-const pop = document.querySelector(".pop");
-const reset = document.querySelector(".reset");
-const bucket = document.querySelector(".main-stack-bucket");
-const input = document.querySelector(".text");
-const massage = document.querySelector(".massage");
-const massageBox = document.querySelector(".massage-box");
-const box = document.querySelectorAll(".box");
+// Updated Variable Declaration
+const push = document.getElementById("add-node");
+const pop = document.getElementById("del-node");
+const reset = document.getElementById("stop");
+const bucket = document.getElementById("bucket");
+const input = document.getElementById("input");
+const messageBox = document.getElementById("msg");
 const stack = [];
 
-//for disable all buttons
+// Metadata elements
+const topValue = document.getElementById("top-value");
+const lastPushed = document.getElementById("last-pushed");
+const lastPopped = document.getElementById("last-popped");
+const stackSize = document.getElementById("stack-size");
+
+// Disable all buttons
 const buttonDisable = () => {
-	push.disabled = true;
-	push.classList.add("disable-button");
-	pop.disabled = true;
-	pop.classList.add("disable-button");
-	reset.disabled = true;
-	reset.classList.add("disable-button");
-	input.disabled = true;
+    [push, pop, reset, input].forEach(element => {
+        element.disabled = true;
+        if (element.tagName === 'BUTTON') {
+            element.classList.add("disable-button");
+        }
+    });
 };
 
-//for enable all buttons
+// Enable all buttons
 const buttonEnable = () => {
-	push.disabled = false;
-	push.classList.remove("disable-button");
-	pop.disabled = false;
-	pop.classList.remove("disable-button");
-	reset.disabled = false;
-	reset.classList.remove("disable-button");
-	input.disabled = false;
+    [push, pop, reset, input].forEach(element => {
+        element.disabled = false;
+        if (element.tagName === 'BUTTON') {
+            element.classList.remove("disable-button");
+        }
+    });
 };
 
-//When the push button will be clicked
+// Update stack metadata display
+const updateMetadata = () => {
+    topValue.textContent = stack.length > 0 ? stack[stack.length - 1] : "None";
+    stackSize.textContent = `${stack.length}/5`;
+};
+
+// Push operation
 push.addEventListener("click", () => {
-	//if input box is empty
-	if (input.value == "") {
-		massage.innerHTML = "Please Enter a value.";
-		massageBox.classList.add("error-massage");
-		setTimeout(() => {
-			massageBox.classList.remove("error-massage");
-		}, 1200);
-		return;
-	}
+    if (!input.value.trim()) {
+        messageBox.textContent = "Please Enter a value.";
+        messageBox.classList.add("error");
+        setTimeout(() => messageBox.classList.remove("error"), 1200);
+        return;
+    }
 
-	//if the stack is full
-	if (stack.length == 5) {
-		input.value = "";
-		massage.innerHTML = "Stack Overflow";
-		massageBox.classList.add("error-massage");
-		setTimeout(() => {
-			massageBox.classList.remove("error-massage");
-		}, 1200);
-		return;
-	}
-	const itemValue = input.value; //for store the input value
-	stack.push(itemValue); //push the value into the stack
+    if (stack.length >= 5) {
+        input.value = "";
+        messageBox.textContent = "Stack Overflow";
+        messageBox.classList.add("error");
+        setTimeout(() => messageBox.classList.remove("error"), 1200);
+        return;
+    }
 
-	//creating a new element
-	const element = document.createElement("div");
-	element.classList.add("ele");
-	element.innerText = stack[stack.length - 1];
-	bucket.appendChild(element);
+    const itemValue = input.value;
+    stack.push(itemValue);
 
-	//update the top
-	box[0].innerHTML = stack[stack.length - 1];
+    const element = document.createElement("div");
+    element.className = "ele";
+    element.textContent = itemValue;
+    bucket.appendChild(element);
 
-	//clear the input box
-	input.value = "";
+    input.value = "";
+    element.classList.add("ele-add");
+    buttonDisable();
 
-	//adding the animation for a new pushed element
-	element.classList.add("ele-add");
-
-	//disable all buttons
-	buttonDisable();
-
-	//after pushing the element
-	setTimeout(() => {
-		//remove the animation
-		element.classList.remove("ele-add");
-
-		//update the Last Pushed Item Value
-		box[1].innerHTML = itemValue;
-
-		//Display the massage
-		massage.innerHTML = `Item ${stack[stack.length - 1]} is Pushed.`;
-
-		//Enable all buttons
-		buttonEnable();
-	}, 1500);
+    setTimeout(() => {
+        element.classList.remove("ele-add");
+        lastPushed.textContent = itemValue;
+        messageBox.textContent = `Item ${itemValue} pushed`;
+        updateMetadata();
+        buttonEnable();
+    }, 1500);
 });
 
-//When the pop button will be clicked
+// Pop operation
 pop.addEventListener("click", () => {
-	//if Stack is Empty
-	if (stack.length == 0) {
-		massageBox.classList.add("error-massage");
-		massage.innerHTML = "Stack Underflow";
-		setTimeout(() => {
-			massageBox.classList.remove("error-massage");
-		}, 1200);
-		return;
-	}
+    if (stack.length === 0) {
+        messageBox.textContent = "Stack Underflow";
+        messageBox.classList.add("error");
+        setTimeout(() => messageBox.classList.remove("error"), 1200);
+        return;
+    }
 
-	//adding the popping animation
-	bucket.lastElementChild.classList.add("ele-remove");
+    const lastElement = bucket.lastElementChild;
+    lastElement.classList.add("ele-remove");
+    buttonDisable();
 
-	//disable all buttons
-	buttonDisable();
-
-	//start popping the element
-	setTimeout(() => {
-		//delete the element from the bucket
-		bucket.removeChild(bucket.lastElementChild);
-		
-		//Storing the popped value
-		const itemValue = stack.pop();
-		
-		//updating the last popped item
-		box[2].innerHTML = itemValue;
-
-		//updating the Top
-		if (stack.length == 0) {
-			box[0].innerHTML = "";
-		} else {
-			box[0].innerHTML = stack[stack.length - 1];
-		}
-
-		//adding the massage
-		massage.innerHTML = `Item ${itemValue} is Popped.`;
-
-		//Enable all buttons
-		buttonEnable();
-	}, 1500);
+    setTimeout(() => {
+        const itemValue = stack.pop();
+        bucket.removeChild(lastElement);
+        lastPopped.textContent = itemValue;
+        messageBox.textContent = `Item ${itemValue} popped`;
+        updateMetadata();
+        buttonEnable();
+    }, 1500);
 });
 
-//When the reset button will be clicked
+// Reset operation
 reset.addEventListener("click", () => {
-	//clear the full array
-	while (stack.length > 0) {
-		stack.pop();
-	}
-
-	//clear all fields
-	box[0].innerHTML = "";
-	box[1].innerHTML = "";
-	box[2].innerHTML = "";
-	massage.innerHTML = "";
-
-	//clear all elements from the bucket
-	while (bucket.firstChild) {
-		bucket.removeChild(bucket.firstChild);
-	}
+    while (stack.length > 0) stack.pop();
+    
+    // Clear visualization
+    while (bucket.firstChild) {
+        bucket.removeChild(bucket.firstChild);
+    }
+    
+    // Reset metadata
+    topValue.textContent = "None";
+    lastPushed.textContent = "None";
+    lastPopped.textContent = "None";
+    stackSize.textContent = "0/5";
+    messageBox.textContent = "";
 });

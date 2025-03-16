@@ -13,6 +13,9 @@ const sms1 = document.getElementById("alert-js1");
 var data;
 var count =0;
 var arr = [];
+
+let completeFlag = false;
+
 var  a =0;
     // stack for infix to prefix
 
@@ -57,11 +60,13 @@ var  a =0;
 
     function addtostack(exp){
         stack.add(exp);
-        sms1.innerHTML = exp + " is Pushed  to stack."
+        // appendLog(exp + " is Pushed to stack.");
     }
+    
     function removefromstack(){
-        sms1.innerHTML = peekfromstack() + " is Poped from stack."
+        const elem = peekfromstack();
         stack.remove();
+        // appendLog(elem + " is Popped from stack.");
     }
     function peekfromstack(){
        return stack.peek();
@@ -164,7 +169,9 @@ function driver(){
 }
 function start()
 {
-    nextButton.addEventListener("click" ,next);
+    nextButton.addEventListener("click" ,()=>{
+        if(!completeFlag) next();
+    });
     var i = 0;
     function next(){
         count = count + 1;
@@ -197,16 +204,16 @@ function start()
         }
         if(count > (array.length+1)){
             answerBox.innerHTML="MISSION SUCCESSFUL";
-            sms1.innerHTML = "Prefix Expression : " + arr.reverse().join("");
+            appendLog("Prefix Expression: " + arr.reverse().join(""));
             return;
         }
         if(count == array.length+1){
             while(!isEmptystack()){
                  answerBox.innerHTML="MISSION SUCCESSFUL";
-                 sms1.innerHTML = "message";
                  printalpha(peekfromstack());
                  opratorStack.removeChild(opratorStack.lastElementChild);
                  removefromstack();
+                 completeFlag=true;
              }
              final2();
              return;
@@ -252,21 +259,20 @@ function printalpha(exp){
     ansFlat.appendChild(alphanum);
     arr[a] = exp;
     a = a+1;
-    sms1.innerHTML = exp + " is Added to Output String."
-}  
+    appendLog(exp + " is Added to Output String.");
+}
 function addstackanimation(exp){
     const oprand = document.createElement("div");
     oprand.classList.add("oprator-box");
     oprand.innerHTML = exp;
     opratorStack.appendChild(oprand);
-    var textmassage = exp + " is Pushed Into Stack";
-    sms1.innerHTML = textmassage;
-    // sendmassage(textmassage);
+    appendLog(exp + " is Pushed Into Stack");
 }
+
 function removestackelement(){
-    var textmassage2 = opratorStack.lastElementChild + " is Poped from Stack";
-    sms1.innerHTML = textmassage2;
+    const elem = opratorStack.lastElementChild.textContent;
     opratorStack.removeChild(opratorStack.lastElementChild);
+    appendLog(elem + " is Popped from Stack");
 }
 // function for priority
 function priority(exp){
@@ -284,18 +290,26 @@ function priority(exp){
     }   
 }
 
+function appendLog(message) {
+    const logEntry = document.createElement('div');
+    logEntry.classList.add('log-entry');
+    logEntry.innerHTML = `
+        <span class="log-message">${message}</span>
+    `;
+    sms1.appendChild(logEntry);
+    sms1.scrollTop = sms1.scrollHeight;
+}
+
 function final2(){
-    // const f = document.createElement("div");
-    // f.classList.add("final-ans");
     finalAns.innerHTML = arr.reverse().join("");
-    // finalAns.appendChild(f);
+    appendLog("Final Prefix Expression: " + finalAns.innerHTML);
 }
 // reset all 
-resetall.addEventListener("click",clear1);
+resetall.addEventListener("click",clearAll);
 
-function clear1()
+function clearAll()
 {
-    
+    location.reload();
 }
 
 

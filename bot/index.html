@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>chat code</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1 class="chat-title">Code AI</h1>
+      </div>
+    </header>
+    <div id="interface" class="interface">
+      <button
+      class="newchat"
+      onclick="window.location.reload()"
+      style="color: aliceblue"
+    >
+      New Chat
+    </button>
+      <div class="chat_input">
+        <input
+          class="userchat"
+          type="text"
+          name="chat"
+          id="chat-input-box"
+          placeholder="send a message...."
+        />
+        <button id="chat-send-btn">
+          <img
+            src="image/external-send-instagram-flatart-icons-outline-flatarticons.png"
+            alt=""
+          />
+        </button>
+      </div>
+      <div id="chat-containeer" class="chat-output"></div>
+    </div>
+    <footer>Chat With AI</footer>
+  </body>
+  <script src="./index.js"></script>
+</html>

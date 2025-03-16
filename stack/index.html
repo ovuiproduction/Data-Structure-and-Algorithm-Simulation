@@ -1,67 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible"
-		content="IE=edge">
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0">
-	<title>stack Visualizer</title>
-	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Visualization</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
-
 <body>
-	<!-- heading -->
-	<header>
-		<h1 class="heading">Stack</h1>
-		<h3 class="title">Stack Visualizer</h3>
-	</header>
+    <div class="container">
+        <header class="main-header">
+            <h1>Stack Data Structure Visualization</h1>
+        </header>
 
-	<div class="container">
-		<div class="container-header">
-			<input type="number" class="text" required>
-			<button class="push">Push</button>
-			<button class="pop ">Pop</button>
-			<button class="reset">Reset</button>
-		</div>
+        <!-- Left Control Panel -->
+        <aside class="control-panel">
+            <div class="input-group">
+                <input type="text" id="input" class="form-input text" 
+                      placeholder="Enter value..." autocomplete="off">
+            </div>
+            
+            <div class="button-group">
+                <button class="btn push" id="add-node">Push</button>
+                <button class="btn pop" id="del-node">Pop</button>
+                <button class="btn reset" id="stop">Reset</button>
+            </div>
+        </aside>
 
-		<div class="container-body">
-			<div class="stack">
-				<div class="main-stack-bucket"></div>
-			</div>
+        <!-- Main Visualization Area -->
+        <main class="visualization-area">
+            <div class="stack-container">
+                <div class="main-stack-bucket" id="bucket"></div>
+                <!-- <div class="stack-base"></div> -->
+            </div>
+            <div class="massage-box" id="msg"></div>
+        </main>
 
-			<div class="info">
-				<div class="sec1">
-					<h3>Top of the Stack:-</h3>
-					<button class="box"></button>
-				</div>
-				<div class="sec2">
-					<h3>Last Pushed Item:-</h3>
-					<button class="box"></button>
-				</div>
-				<div class="sec3">
-					<h3>Last Popped Item:-</h3>
-					<button class="box"></button>
-				</div>
-				<div class="sec3">
-					<h3>Size of the Stack:-</h3>
-					<button class="box">5</button>
-				</div>
-
-				<div class="massage-box">
-					<h2>Massage Box</h2>
-					<div class="massage"></div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<!-- script -->
-	<script src="./index.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <!-- Right Status Panel -->
+        <aside class="status-panel">
+            <div class="status-card">
+                <h3>Stack Metadata</h3>
+                <div class="status-item">
+                    <span class="status-label">Top of Stack:</span>
+                    <span id="top-value" class="status-value">None</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Last Pushed:</span>
+                    <span id="last-pushed" class="status-value">None</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Last Popped:</span>
+                    <span id="last-popped" class="status-value">None</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Stack Size:</span>
+                    <span id="stack-size" class="status-value">0/5</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <script src="./index.js"></script>
 </body>
-
 </html>
