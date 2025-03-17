@@ -1,6 +1,6 @@
 # DSA Visualizer 
 
-[Live Demo](https://ovuiproduction.github.io/Data-Structure-and-Algorithm-Simulation/)
+### [Live Demo](https://ovuiproduction.github.io/Data-Structure-and-Algorithm-Simulation/)
 
 ## Title :  V-Learn - Visualizing Data Structures and Algorithms through Animations
 
