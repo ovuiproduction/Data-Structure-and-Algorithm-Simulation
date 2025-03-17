@@ -1,4 +1,4 @@
-## V - Learn : Learning DSA Through Visuals
+# V - Learn : Learning DSA Through Visuals
 
 ### [Live Demo](https://ovuiproduction.github.io/Data-Structure-and-Algorithm-Simulation/)
 
