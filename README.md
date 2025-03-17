@@ -1,8 +1,8 @@
-# DSA Visualizer 
+# V - Learn : The Visual Learning
 
 ### [Live Demo](https://ovuiproduction.github.io/Data-Structure-and-Algorithm-Simulation/)
 
-## Title :  V-Learn - Visualizing Data Structures and Algorithms through Animations
+## V-Learn - Visualizing Data Structures and Algorithms through Animations
 
 <p style="text-align:justify">This project addresses the inherent challenges students face in comprehending data structures and algorithms, pivotal concepts in computer science and information technology. Recognizing the difficulties students encounter in learning and grasping these fundamental principles, our focus is on developing an innovative tool that leverages user-interactive animations. Unlike existing online tools that offer prebuilt animations, our approach aims to enhance understanding by providing step-by-step visualizations of data structure and algorithm operations.</p>
 
@@ -15,16 +15,22 @@
 4. Doubly LinkedList
 
 ### Sorting Algorithms
-5. Bubble Sort
-6. Merge Sort
-7. Quick Sort
-8. Insertion Sort
-9. Selection Sort
+1. Merge Sort
+2. Quick Sort
 
 ### Expression Conversion Algorithms
-10. infix to prefix , prefix to infix
-11. infix to postfix , postfix to infix
-12. prefix to postfix , postfix to prefix
+1. infix to prefix
+2. infix to postfix
+3. postfix to infix
+4. prefix to postfix
+
+### Encryption Algorithms
+1. Ceasar Cipher
+2. DES Encryption
+3. DES Decryption
+
+## Code AI - The chat bot 
+- AI chat bot for solving all type of DSA queries.
 
 ## Aim of Project 
 
