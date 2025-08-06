@@ -40,7 +40,12 @@ This project promotes E-learning.
 3. To increase the interest of students in data structure learning.
 
 
-Skills: JavaScript · Animation Design · Front-End Development · HTML5 · Data Structures · Cascading Style Sheets (CSS)
+## Skills: 
+  1. JavaScript
+  2. Animation Design
+  3. Front-End Development
+  4. HTML5 & Cascading Style Sheets (CSS)
+  5. Data Structures & Algorithms
 
 ## Project Grant
 
