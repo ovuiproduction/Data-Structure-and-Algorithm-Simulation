@@ -42,5 +42,6 @@ This project promotes E-learning.
 
 Skills: JavaScript · Animation Design · Front-End Development · HTML5 · Data Structures · Cascading Style Sheets (CSS)
 
-### Lincense
+
+## Lincense
 This project is licensed under the MIT License. See the [License](https://github.com/ovuiproduction/Data-Structure-and-Algorithm-Simulation/blob/main/LICENSE) file for details.
