@@ -44,4 +44,4 @@ Skills: JavaScript · Animation Design · Front-End Development · HTML5 · Data
 
 
 ## Lincense
-This project is licensed under the MIT License. See the [License](https://github.com/ovuiproduction/Data-Structure-and-Algorithm-Simulation/blob/main/LICENSE) file for details.
+This project is licensed under the [MIT License](https://github.com/ovuiproduction/Data-Structure-and-Algorithm-Simulation/blob/main/LICENSE).
